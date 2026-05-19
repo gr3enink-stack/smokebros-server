@@ -11,6 +11,7 @@ import productRoutes from './routes/products';
 import orderRoutes from './routes/orders';
 import paymentRoutes from './routes/payments';
 import adminRoutes from './routes/admin';
+import uploadRoutes from './routes/upload';
 
 // Load env vars
 dotenv.config();
@@ -56,6 +57,7 @@ app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/payments', paymentRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/upload', uploadRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
